@@ -1,0 +1,93 @@
+/* Your code here */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    margin: 10px auto;
+    width: 300px;
+    height: 300px;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 5px solid black;
+    padding: 5px;
+}
+
+.square:hover img {
+    cursor: not-allowed;
+}
+
+.square:first-child,
+.square:last-child,
+.square:nth-child(3),
+.square:nth-child(7) {
+    border: unset;
+}
+
+.square:nth-child(2),
+.square:nth-child(8) {
+    border-top: unset;
+    border-bottom: unset;
+}
+
+.square:nth-child(3) {
+    border-right: unset;
+    border-top: unset;
+    border-bottom: unset;
+}
+
+.square:nth-child(4),
+.square:nth-child(6) {
+    border-left: unset;
+    border-right: unset;
+}
+
+#buttons {
+    margin-top: 20px;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+button {
+    font-size: 16x;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+}
